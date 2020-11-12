@@ -5,18 +5,24 @@ html {
     box-sizing: border-box;
 }
 
-h1 {
+h2 {
    font-size: 30px;
-   margin: 0%;
    color:  rgb(7, 4, 218);
    text-align: center;
+   padding: none;
+   position: sticky;
+   margin-block-start: 2px;
+   margin-block-end: 2px;
 }
 
-h2 {
+h3 {
    font-size: 25px;
-   margin: 0%;
    color:  rgb(7, 4, 218);
    text-align: center;
+   padding: none;
+   position: sticky;
+   margin-block-start: 2px;
+   margin-block-end: 2px;
 }
  
 *, *:before, *:after {
@@ -32,12 +38,13 @@ body {
   
 .wrapper {
     width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
   
 .header-container {
     border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
 }
   
 .footer-container,
@@ -46,8 +53,7 @@ body {
 }
   
 .header-container,
-.footer-container,
-.main aside {
+.footer-container {
     background: #a8a7a7;
 }
   
@@ -59,13 +65,13 @@ body {
 }
 
 .container1 {
-    position: relative;
+    position: relative; 
     width: 50%;
-    max-width: 300px;
+    max-width: 150px;
 }
 
 .potImg {
-    display: block;
+    display: inline-block;
     width: 150px;
     height: auto;
 }
@@ -189,9 +195,14 @@ body {
     display:block;
 }
 
-.imgContainer {
-    padding: 100;
-}
+/* .imgWrapper {
+    width: 70%;
+    margin-block-start: 2px;
+    margin-block-end: 2px;
+    padding: 2px;
+    display: block;
+    border: none;
+} */
 
 /********************
 Media Queries
