@@ -1,34 +1,30 @@
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
     box-sizing: border-box;
 }
 
-h2 {
-   font-size: 30px;
-   color:  rgb(7, 4, 218);
-   text-align: center;
-   padding: none;
-   position: sticky;
-   margin-block-start: 2px;
-   margin-block-end: 2px;
+header {
+    display: flex;
+    height: 300px;
+    
+
 }
 
-h3 {
-   font-size: 25px;
-   color:  rgb(7, 4, 218);
-   text-align: center;
-   padding: none;
-   position: sticky;
-   margin-block-start: 2px;
-   margin-block-end: 2px;
+.main-header {
+    text-align: center;
 }
- 
-*, *:before, *:after {
-    box-sizing: inherit;
+
+.navbar-image{
+    background-image: url(BBP1.jpeg);
+    background-color: #a8a7a7;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+    
 }
-  
+
 body {
     font-family: Helvetica, Helvetica Neue, Arial;
     font-size: 16px;
@@ -36,44 +32,15 @@ body {
     text-decoration: none;
 }
   
-.wrapper {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-  
 .header-container {
     border-bottom: 2px solid #000000;
     border-top: 2px solid #000000;
-}
-  
-.footer-container,
-.main aside {
-    border-top: 2px solid #000000;
-}
-  
-.header-container,
-.footer-container {
-    background: #a8a7a7;
-}
-  
-.title {
-    color: rgb(7, 4, 218);
-    font-size: 25px;
-    text-decoration: none;
-    text-align: center;
 }
 
 .container1 {
     position: relative; 
     width: 50%;
     max-width: 150px;
-}
-
-.potImg {
-    display: inline-block;
-    width: 150px;
-    height: auto;
 }
 
 .overlay {
@@ -94,13 +61,6 @@ body {
 .container1:hover .overlay {
     opacity: 1;
 }
-/* .potImg, .bowlImg, .mugImg, .plateImg, .heartImg, .snpImg, .stoneImg {
-   display: inline-flexbox;
-   border: 1px solid black;
-   height: 10px; 
-   width: 17px;
-   overflow: hidden;
-} */
 
 .bar1, .bar2, .bar3 {
     width: 35px;
@@ -124,27 +84,52 @@ body {
     transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #a8a7a7;
-}
 
 .navbar a {
-    float: left;
+    color: white;
+}
+
+/* .navbar-items {
+    width: 100%;
+} */
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 250px;
+    align-items: flex-end;
+
+}
+
+a {
+    text-decoration: none;
+    padding: 16px;
+}
+
+ .items {
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 12px 16px;
     text-decoration: none;
+    border: none;
+    outline: none;
+} 
+
+.item-1, .item-3, .item-4, .item-5 {
+    padding: 16px;
 }
 
 .dropbtn {
-    background-color: #a8a7a7;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -152,18 +137,19 @@ body {
 }
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 
 .dropdown .dropbtn {
     font-size: 16px;
+    padding: 16px;
     border: none;
     outline: none;
     color: white;
-    background-color: #a8a7a7;
     font-family: inherit;
     margin: none;
+    align-self: center;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -173,9 +159,10 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #a8a7a7;
+    padding: 16px;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
+    overflow: auto;
     z-index: 1;
 }
 
@@ -183,16 +170,16 @@ body {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
-    display: block;
     text-align: center;
-}
-
-.dropdown-content a:hover {
     background-color: #333333;
 }
 
+.dropdown-content a:hover {
+    background-color: transparent;
+}
+
 .show {
-    display:block;
+    display: block;
 }
 
 /* .imgWrapper {
@@ -208,12 +195,11 @@ body {
 Media Queries
 ********************/
 
-/* @media only screen and (min-width: 480px) {
-    nav a {
-        float: left;
-        width: 30%;
-        margin: 0 0 0 0 5%;
-        padding: 25px;
-        margin-bottom: 0;
+@media only screen and (min-width: 480px) {
+    /* .main-header {
+        display: inline-flex;
+    } */
+    .main-images {
+        display: flex;
     }
-} */
+} 
