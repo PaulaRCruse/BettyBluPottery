@@ -4,9 +4,10 @@ html {
 
 header {
     display: flex;
+    justify-content: center;
     height: 300px;
-    
-
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
 }
 
 .main-header {
@@ -22,25 +23,12 @@ header {
     background-size: contain;
     position: relative;
     width: 100%;
-    
 }
 
 body {
     font-family: Helvetica, Helvetica Neue, Arial;
     font-size: 16px;
-    line-height: 26px;
     text-decoration: none;
-}
-  
-.header-container {
-    border-bottom: 2px solid #000000;
-    border-top: 2px solid #000000;
-}
-
-.container1 {
-    position: relative; 
-    width: 50%;
-    max-width: 150px;
 }
 
 .overlay {
@@ -49,12 +37,12 @@ body {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
-    width: 50%;
+    width: 87%;
     transition: 0.5s ease;
     opacity: 0;
     color: rgb(255, 255, 255);
     font-size: 20px;
-    padding: 5px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -87,11 +75,9 @@ body {
 
 .navbar a {
     color: white;
+    text-decoration: none;
+    padding: 16px;
 }
-
-/* .navbar-items {
-    width: 100%;
-} */
 
 ul {
     list-style-type: none;
@@ -101,18 +87,21 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     height: 250px;
-    align-items: flex-end;
-
+    align-items: flex-start;
 }
 
-a {
-    text-decoration: none;
-    padding: 16px;
+.container {
+    display: none;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+
+}
  .items {
     font-size: 16px;
-    color: white;
+    color: purple;
     text-align: center;
     text-decoration: none;
     border: none;
@@ -159,8 +148,6 @@ a {
 .dropdown-content {
     display: none;
     position: absolute;
-    padding: 16px;
-    min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 2);
     overflow: auto;
     z-index: 1;
@@ -179,7 +166,39 @@ a {
 }
 
 .show {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    padding: 50px;
+}
+
+.container1 {
+    position: relative;
+    max-width: 300px;
+    width: 50%;
+    margin: 20px;
+}
+
+.image {
     display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
 }
 
 /* .imgWrapper {
@@ -197,9 +216,13 @@ Media Queries
 
 @media only screen and (min-width: 480px) {
     /* .main-header {
-        display: inline-flex;
+        display: none;
+    }   */
+    /* .container {
+        display: block;
     } */
-    .main-images {
-        display: flex;
-    }
-} 
+}
+
+@media only screen and (min-width: 720px) {
+
+}
