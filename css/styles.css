@@ -1,3 +1,6 @@
+/************
+Basic CSS
+************/
 html {
     box-sizing: border-box;
 }
@@ -6,10 +9,16 @@ h1 {
     margin: 0;
 }
 
+.page-id {
+    text-align: center;
+    padding-top: 10px;
+}
+
 .logo-container {
     display: flex;
 }
 
+/* Logo picture*/
 .logo {
    width: 100%;
 }
@@ -23,19 +32,19 @@ body {
     font-size: 16px;
     text-decoration: none;
 }
-
+/* Text overlay */
 .overlay {
     position: absolute;
     bottom: 0;
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
     color: #f1f1f1;
-    width: 87%;
+    width: 100%;
+    max-width: 300px;
     transition: 0.5s ease;
-    opacity: 0;
     color: rgb(255, 255, 255);
     font-size: 20px;
-    padding: 20px;
+    padding: 20px 0px;
     text-align: center;
 }
 
@@ -43,28 +52,10 @@ body {
     opacity: 1;
 }
 
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #a8a7a7;
-    margin: 6px 0;
-    transition: 0.4s;
+.navbar {
+    padding-inline-start: 0px;
+    margin-block-start: 0px;
 }
-
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}
-
 
 .navbar a {
     color: white;
@@ -77,29 +68,12 @@ ul {
     
 }
 
-.container {
-    display: none;
-}
-
-.navbar {
-    padding-inline-start: 0px;
-    margin-block-start: 0px;
-}
-
 .items {
     font-size: 16px;
     text-align: center;
     text-decoration: none;
     border: none;
     outline: none;
-} 
-
-.betty {
-    width: 100%;
-}
-
-.store {
-    width: 100%;
 }
 
 .item-1, .item-3, .item-4, .item-5 {
@@ -116,7 +90,7 @@ ul {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #333333;
+    background-color: #aaaaaaa4;
 }
 
 .dropdown .dropbtn {
@@ -131,7 +105,7 @@ ul {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #333333;
+    background-color: #aaaaaaa4;
 }
 
 .dropdown-content {
@@ -151,13 +125,19 @@ ul {
 }
 
 .dropdown-content a:hover {
-    background-color: transparent;
+    background-color: #aaaaaaa4;
 }
 
 .show {
     display: flex;
     flex-direction: column;
 }
+
+
+
+
+
+
 
 .main-images {
     display: flex;
@@ -166,7 +146,7 @@ ul {
     justify-content: center;
     align-items: center;
     align-content: space-between;
-    padding: 50px;
+    padding: 10px;
 }
 
 .container1 {
@@ -180,6 +160,15 @@ ul {
     display: block;
     width: 100%;
     height: auto;
+}
+.main-about {
+    display: block;
+    padding: 50px;
+    font-size: 25px;
+}
+
+.betty, .store {
+    width: 100%;
 }
 
 .main-footer {
@@ -195,43 +184,77 @@ Media Queries
 ********************/
 
 @media only screen and (min-width: 600px) {
+    
     .main-header {
         display: flex;
     }
+    /* makes navbar go from vertical to horizontal and pushed the navbar to the right*/
     .navbar {
         display: flex;
         justify-content: flex-end;
     
-        }
+    }
+    /*causes the main logo to turn into a back ground image and pushes it to the left*/
     .navbar-image {
-    
     background-image: url(logo2.jpeg);
-    
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left; 
     position: relative;
     width: 100%;
     }
+    /*removes logo*/
     .logo {
         display: none;
     }
+    /*makes dropdown content position below gallery button*/
     .dropdown-content {
         position: absolute;
     }
+    /*positions the two images on the about page in the center
+    causes the images to grow as the screen size increase */
     .betty, .store {
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-        
+    }
+    /*fixed issue with pictures sizing wrong*/
+    .main-images {
+        padding: 50px;
+    }
+    /*makes the overlay disappear unless the user hovers over them */
+    .overlay {
+        opacity: 0;
+    }
+}
+/* forces the two images to opposite ends and allows text to wrap around */
+@media only screen and (min-width: 1000px) {
+    .betty {
+        max-width: 200px;
+        clear: right;
+        float: left;
+        margin: 10px;
+    }
+    
+    .store {
+        max-width: 300px;
+        clear: left;
+        float: right;
+        margin: 10px;
     }
 }
 
-@media only screen and (min-width: 720px) {
-    
+@media only screen and (min-width: 1360px) {
+    .main-images {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
 }
 
-@media only screen and (min-width: 1000px) {
-
+@media only screen and (min-width: 1640px) {
+    .main-images {
+        padding-left: 300px;
+        padding-right: 300px;
+    }
 }
