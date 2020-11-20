@@ -9,6 +9,34 @@ h1 {
     margin: 0;
 }
 
+ul {
+    list-style-type: none;
+    
+}
+
+body {
+    font-family: Helvetica, Helvetica Neue, Arial;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.main-about {
+    display: block;
+    padding: 50px;
+    font-size: 25px;
+}
+
+.main-footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    font-size: 14px;
+}
+/* h1 element which lets the user 
+know what page they are on */
 .page-id {
     text-align: center;
     padding-top: 10px;
@@ -23,33 +51,9 @@ h1 {
    width: 100%;
 }
 
+/* navigation bar */
 .navbar-image{
     background-color: #333333;
-} 
-
-body {
-    font-family: Helvetica, Helvetica Neue, Arial;
-    font-size: 16px;
-    text-decoration: none;
-}
-/* Text overlay */
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    max-width: 300px;
-    transition: 0.5s ease;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    padding: 20px 0px;
-    text-align: center;
-}
-
-.container1:hover .overlay {
-    opacity: 1;
 }
 
 .navbar {
@@ -63,11 +67,6 @@ body {
     padding: 16px;
 }
 
-ul {
-    list-style-type: none;
-    
-}
-
 .items {
     font-size: 16px;
     text-align: center;
@@ -79,7 +78,9 @@ ul {
 .item-1, .item-3, .item-4, .item-5 {
     padding: 16px;
 }
-
+/**************
+dropdown button
+***************/
 .dropbtn {
     color: white;
     padding: 16px;
@@ -132,13 +133,7 @@ ul {
     display: flex;
     flex-direction: column;
 }
-
-
-
-
-
-
-
+/* flexbox for all images that are in the main body */
 .main-images {
     display: flex;
     flex-wrap: wrap;
@@ -148,7 +143,8 @@ ul {
     align-content: space-between;
     padding: 10px;
 }
-
+/* part of the overlay which allows viewers to see what each 
+gallery item is and what link the are associated with */
 .container1 {
     position: relative;
     max-width: 300px;
@@ -161,23 +157,32 @@ ul {
     width: 100%;
     height: auto;
 }
-.main-about {
-    display: block;
-    padding: 50px;
-    font-size: 25px;
+/* Text overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    max-width: 300px;
+    transition: 0.5s ease;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 20px 0px;
+    text-align: center;
 }
 
+.container1:hover .overlay {
+    opacity: 1;
+}
+
+/* about images */
 .betty, .store {
     width: 100%;
 }
 
-.main-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
 
-}
 
 /********************
 Media Queries

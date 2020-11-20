@@ -1,19 +1,23 @@
+/**************
+Contact Us Form
+**************/
 form {
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
     background: #f0ce72;
     border-radius: 8px;
-  }
+}
   
-  h2 {
+h2 {
     margin: 0 0 30px 0;
     text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
+}
+
+/* input fields css */
+input[type="text"],
+input[type="email"],
+textarea {
     background: rgba(255,255,255,0.1);
     border: none;
     font-size: 16px;
@@ -26,9 +30,10 @@ form {
     color: #ffffff;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
-  }
-  
-  .sub-button {
+}
+
+/* submit button css */
+.sub-button {
     padding: 19px 39px 18px 39px;
     color: #FFF;
     background-color: #242424;
@@ -41,18 +46,19 @@ form {
     border-width: 1px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 8px;
-  }
+}
   
-  
-  @media screen and (min-width: 600px) {
+/* changes the width for larger 
+screen sizes from 300px to 480px */  
+@media screen and (min-width: 600px) {
   
     form {
         max-width: 480px;
     }
   
-  }
+}
